@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638579676098057155
-    m_Hash: 3937284993
+      ticks: 638580276617494537
+    m_Hash: 782553083
   m_LockFileStatus:
     m_FilePath: C:/dev/AnimationPractice/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638579676098082225
-    m_Hash: 2440159917
+      ticks: 638580276617494537
+    m_Hash: 2554608913
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

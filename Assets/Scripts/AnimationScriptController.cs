@@ -8,7 +8,7 @@ public class AnimationScriptController : MonoBehaviour
     [SerializeField] float _deceleration = 0.5f;
     
     Animator _animator;
-    float _velocity = 0.0f;
+    float _velocity = 0f;
 
     void Awake()
     {
@@ -18,9 +18,21 @@ public class AnimationScriptController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var forwardPressed = Input.GetKey(KeyCode.W);
         var runPressed = Input.GetKey(KeyCode.LeftShift);
 
+        Forward();
+
+        if (_velocity < 0f)
+        {
+            _velocity = 0f;
+        }
+        
+        _animator.SetFloat("Velocity", _velocity);
+    }
+
+    void Forward()
+    {
+        var forwardPressed = Input.GetKey(KeyCode.W);
         if (forwardPressed && _velocity < 1f)
         {
             _velocity += Time.deltaTime * _acceleration;
@@ -31,11 +43,6 @@ public class AnimationScriptController : MonoBehaviour
             _velocity -= Time.deltaTime * _deceleration;
         }
         
-        if (_velocity < 0f)
-        {
-            _velocity = 0f;
-        }
         
-        _animator.SetFloat("Velocity", _velocity);
     }
 }
